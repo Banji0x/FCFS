@@ -1,27 +1,20 @@
 package model;
 
-import java.util.TimerTask;
+public final class Task {
+    private final int runningTime;
 
-public final class Task extends TimerTask {
-    private final int runningTimeInSeconds;
-
-    public Task(int runningTimeInSeconds) {
-        this.runningTimeInSeconds = runningTimeInSeconds;
+    public Task(int runningTime) {
+        this.runningTime = runningTime;
     }
 
     public int runningTimeInSeconds() {
-        return runningTimeInSeconds;
-    }
-
-    @Override
-    public void run() {
-        System.out.println(runningTimeInSeconds);
+        return runningTime;
     }
 
     @Override
     public String toString() {
         return "Task{" +
-                "runningTimeInSeconds=" + runningTimeInSeconds +
+                "runningTimeInSeconds=" + runningTime +
                 '}';
     }
 }
